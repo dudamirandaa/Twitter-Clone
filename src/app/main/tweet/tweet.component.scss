@@ -1,0 +1,148 @@
+.container{
+  display: flex;
+  flex-direction: column;
+
+  padding: 14px 16px;
+
+  border-bottom: 1px solid var(--outline);
+
+  max-width: 100%;
+  &:hover{
+    cursor: pointer;
+    opacity: 0.85;
+  }
+}
+.retweeted{
+  display: flex;
+  align-items: center;
+
+  font-size: 13px;
+  color: var(--gray);
+  >span{
+    margin-left: 35px;
+  margin-right: 9px;
+  }
+}
+body{
+  display: flex;
+  margin-top: 3px;
+  position: relative;
+}
+.avatar{
+  width: 49px;
+  height: 49px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background-color: var(--gray);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.content{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top:  2px;
+  padding-left: 59px;
+}
+.header{
+  display: flex;
+  align-items: center;
+
+  font-size: 15px;
+  white-space: nowrap;
+
+  >strong{
+    margin-right: 5px;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+  >span, time{
+    color: var(--gray);
+  }
+  >strong, span{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  >.dot{
+    background: var(--gray);
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    margin: 0 10px;
+
+    transform: translateY(50%);
+  }
+}
+.text{
+  display: flex;
+  justify-content: flex-start;
+  font-size: 14px;
+  margin-top: 4px;
+}
+.imageContent{
+  margin-top: 12px;
+  width: 100%;
+  //height: min(285px, max(175px, 41vh));
+
+  background: var(--outline);
+  border-radius: 14px;
+
+  cursor: pointer;
+
+  >img{
+    background-repeat: no-repeat;
+    width: 100%;
+    border-radius: 14px;
+  }
+}
+.icons{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 11px auto 0;
+  width: 100%; //mobile
+
+  @media (min-width: 330px){
+    width: 63%;
+  }
+
+  >div{
+    cursor: pointer;
+  }
+}
+.status{
+  display: flex;
+  align-items: center;
+
+  font-size: 14px;
+  color: var(--gray);
+
+  >span>svg{
+    margin-right: 10px;
+  }
+  &:hover{
+    >.commentValue{
+      color: var(--twitter);
+    }
+    >.retweetValue{
+      color: var(--retweet);
+    }
+    >.likeValue{
+      color: var(--like);
+    }
+    >.commentIcon>svg{
+      fill: var(--twitter);
+    }
+    >.retweetIcon>svg{
+      fill: var(--retweet);
+    }
+    >.likeIcon>svg{
+      fill: var(--like);
+    }
+  }
+}

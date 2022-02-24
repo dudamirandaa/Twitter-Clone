@@ -1,0 +1,28 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.tab{
+  margin-top: 10px;
+  padding: 11px 0 15px;
+
+  font-weight: bold;
+  font-size: 15px;
+
+  outline: 0;
+  cursor: pointer;
+
+  color: var(--twitter);
+  border-bottom: 2px solid var(--twitter);
+
+  &:hover{
+    background: var(--twitter-dark-hover);
+  }
+}
+.tweets{
+  display: flex;
+  flex-direction: column;
+
+  flex-shrink: 0;
+}

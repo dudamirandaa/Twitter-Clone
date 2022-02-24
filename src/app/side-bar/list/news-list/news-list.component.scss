@@ -1,0 +1,30 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--secondary);
+  border-radius: 14px;
+  margin-top: 10px;
+  width: max(390px, 100%);
+}
+
+.title{
+  padding: 10px 16px;
+
+  font-weight: bold;
+  font-size: 19px;
+}
+h2{
+  padding: 13px 16px 17px;
+
+  border-top: 1px solid var(--outline);
+  font-weight: normal;
+  font-size: 14px;
+  color: var(--twitter);
+
+  cursor: pointer;
+
+  &:hover{
+    background: var(--search);
+    border-radius: 0 0 14px 14px;
+  }
+}

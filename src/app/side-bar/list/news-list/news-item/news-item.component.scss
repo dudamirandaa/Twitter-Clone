@@ -1,0 +1,22 @@
+.container{
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  border-top: 1px solid var(--outline);
+
+  font-size: 14px;
+
+  &:first-child {
+    padding: 13px 16px;
+  }
+  &:last-child{
+    padding-bottom: 17px;
+  }
+  >span{
+    color: var(--gray);
+  }
+  &:hover{
+    cursor: pointer;
+    background: var(--search);
+  }
+}
